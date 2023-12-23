@@ -1,0 +1,348 @@
+/********** Template CSS **********/
+:root {
+    --primary:#6b3cc9;
+    --secondary: #f28d35;
+    --Analogous_color_1  : #6a44f2;
+    --Analogous_color_2: #1cbddd;
+    --Triadic_color_1: #52378c; 
+    --Dark_color:#4dca79; 
+    --Text_color:#2f2f2f; 
+    --text_color_light:#535a75;
+    --Text_color_subtitle: #9c9991;
+    --Accent_color_1:#e2f2fe;
+    --Accent_color_2:#fff8e0;
+    --half-color:#78bf91;
+    --half-color2:#4dca79;
+    --error_color: #ff0335;
+    --success_color: #5eb30b;
+}
+
+h1
+h2,
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+h3,
+h4,
+.font-weight-semi-bold {
+    font-weight: 600 !important;
+}
+
+h5,
+h6,
+.font-weight-medium {
+    font-weight: 500 !important;
+}
+
+.btn {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+
+
+
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.top-shape::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 100%;
+    top: 0;
+    left: -17px;
+    background: var(--primary);
+    transform: skew(40deg);
+}
+
+.navbar-light .navbar-nav .nav-link { /* navigation design */
+    font-family: 'Jost', sans-serif;
+    padding: 35px 15px;
+    font-size: 18px;
+    color: var(--Accent_color_1);
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-nav .nav-link {
+    color: (var(--Accent_color_1));
+    padding: 20px 15px;
+
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--Accent_color_1);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top.navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+}
+
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    z-index: 1;
+}
+
+
+
+/* body design */
+/* Add this CSS code to style the body content container */
+.body-content {
+    text-align:left; /* Center the content */
+    padding: 120px; /* Adjust the padding as needed */
+}
+
+/* Style for the image */
+.body-content img {
+    max-width: 100%; /* Make sure the image doesn't exceed its container width */
+    height: auto; /* Maintain the aspect ratio of the image */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+}
+
+.body-text {
+    display: flex;
+    justify-content: space-between;
+   text-align: right;
+   text-justify:auto;
+}
+
+/* Add this CSS code to style the image */
+.body-text img {
+    max-width: 40%; /* Adjust the width as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-details p
+{   font-size: 18px;
+    text-align:left;
+    margin-top: 20px
+    var(--Text_color);
+}
+
+.content-details h2{
+    color: var(--Text_color);
+    text-align:start;
+    font-size: 28px;
+    
+    
+}
+
+/* Add this CSS code to create space between the image and the text */
+.content-details {
+    flex-grow: 1;
+    padding: 0 160px; /* Add horizontal padding */
+    text-align: right;
+}
+
+.additional-content {
+    max-width: 40%; /* Adjust the width as needed */
+    padding-left: 60px; /* Add space on the left side of the container */
+}
+
+/* Adjust the CSS for the button */
+.learn-more-btn {
+    background-color: #f28d35;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px; /* Adjust the margin as needed */
+    display: block; /* Make the button a block element to start on a new line */
+    margin-left:5px; /* Align the button to the right (end) */
+}
+/* Add this CSS code to create space between text and image */
+.digital-consulting div {
+    text-align: left;
+   
+}
+
+.digital-consulting h2 {
+    font-size: 28px;
+    color: var(--Text_color);
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align:left;
+}
+
+.digital-consulting p {
+    font-size: 18px;
+    color: var(--Text_color);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.digital-consulting .content-details {
+    margin-right: 20px;
+}
+
+.digital-consulting .digital-consulting-img {
+    max-width: 100%; /* Adjust the max-width as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Update the styles for the other image to match the size */
+.body-text img,
+.digital-consulting img {
+    max-width: 100%; /* Adjust the max-width as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* bunnon 2*/
+/* Add this CSS code to style the Learn More button */
+/* Add this CSS code to style the Learn More button container */
+.learn-more-btn-container {
+    margin-top: 15px; /* Adjust the margin as needed */
+    text-align:start; /* Align the button to the left */
+}
+
+/* Add this CSS code to style the Learn More button */
+.learn-more-btn2 {
+    background-color: #f28d35;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block; /* Make the button an inline-block element */
+}
+
+
+/* Add this CSS code for the gradient square on the specific page */
+.unique-page-class .carousel-item.active::before {
+    content: "";
+    position: absolute;
+    top: calc(90% - 40%); /* Adjust the top position to be at the bottom of the image */
+    left: 5%;
+    width: 40%;
+    height: 40%;
+    background: linear-gradient(to bottom, #78bf91, #4dca79);
+    z-index: 1;
+}
+
+.unique-page-class .carousel-caption {
+    font-size: 26px;
+    margin-left: 60px;
+    justify-items:flex-start;
+    color: (var(--Text_color));
+    top: 70%; /* Adjust the position of the caption */
+    transform: translateY(-30%);
+    z-index: 2;
+}
+/*consult */
+.specific-page .body-content {
+    background: linear-gradient(to right, var(--half-color), var(--half-color2));
+    text-align: justify;
+    padding: 120px;
+    box-sizing:initial; 
+}
+
+.specific-page .body-content p {
+    font-size: 30px;
+    color: var(--Accent_color_1);
+    margin-top: 10px;
+    
+}
+
+.specific-page .learn-more-btn-container {
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.specific-page .learn-more-btn {
+    background-color: #f28d35;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+
+
+/* Add this CSS code to align "Our Services" and "Our Technologies" on the same line */
+.specific-page .footer-main .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.specific-page .footer-main .col-lg-3 {
+    width: 50%; /* Set the width to 50% to make them side by side */
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+    padding-left: 50px; /* Adjust this value to control the space */
+}
+
+
+/* get line for breke the that to footer*/
+/* Add this CSS code to create a white line after the first container */
+.line-container {
+    border-top: 1px solid #fff; /* White border line */
+    padding-top: 20px; /* Adjust the padding as needed */
+}
+
+.line-container p,
+.line-container a {
+    color: #fff; /* White text color */
+}
+
+.line-container p {
+    display: inline-block; /* Make the paragraph behave like an inline element */
+    
+}
+
+/*footer desgign*/
+/* Add this CSS code to set the background color for the footer */
+.footer-main {
+    background-color: #6b3cc9;
+}
+
+.footer-main h3,
+.footer-main a,
+.footer-main p {
+    color: #fff; /* White text color */
+}
+
